@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // para que o id seja auto incrementado pelo banco de dados
     private Long id;
     private String title;
     @Column(name = "game_year") // esta mudando o nome year no sql, pois é uma palavra reservada
@@ -19,10 +19,10 @@ public class Game {
     private Double score;
     private String imgUrl;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT") // usando isso para dizer ao banco de dados que é uma descrição longa
     private String shortDescription;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT") // usando isso para dizer ao banco de dados que é uma descrição longa -> para o bd gerar como se fosse um texto e não um varchar de 255 caracteres
     private String longDescription;
 
     public Game(){

@@ -14,6 +14,7 @@ public class GameMinDTO {
 
     }
 
+    // O construtor recebe a entidade Game como argumento
     public GameMinDTO(Game entity) {
         id = entity.getId();  // não precisa usar o this.id, pq n tem ambiguidade
         title = entity.getTitle();

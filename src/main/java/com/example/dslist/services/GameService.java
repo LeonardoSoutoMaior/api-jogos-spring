@@ -8,14 +8,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service  // está sendo registrado que a camada service é um componente do sistema
 public class GameService {
 
     @Autowired
     private GameRepository gameRepository;
     public List<GameMinDTO> findAll(){
         List<Game> result = gameRepository.findAll();
-        List<GameMinDTO> dto = result.stream().map(x -> new GameMinDTO(x)).toList();
-        return dto;
+        return result.stream().map(x -> new GameMinDTO(x)).toList();  // transformando o objeto Game em um GameMinDTO
     }
 }
