@@ -19,7 +19,7 @@ public class GameDTO {
     }
 
     public GameDTO(Game entity){
-        BeanUtils.copyProperties(entity, this); // esse metodo serve para copiar o construtor // por exemplo fazer this.id = id;
+        BeanUtils.copyProperties(entity, this); // esse metodo serve para copiar o construtor // por exemplo fazer this.id = id; // como implementou o beanUtils, tem que implementar os set
     }
 
     public Long getId() {
