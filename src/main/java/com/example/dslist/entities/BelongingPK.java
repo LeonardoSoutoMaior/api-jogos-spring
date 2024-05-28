@@ -9,8 +9,8 @@ import java.util.Objects;
 @Embeddable  // encapsulando dois atributos em 1 só
 public class BelongingPK {
 
-    @ManyToOne
-    @JoinColumn(name = "game_id")
+    @ManyToOne // muitos para 1
+    @JoinColumn(name = "game_id") // nome da chave estrangeira
     private Game game;
 
     @ManyToOne
